@@ -85,6 +85,6 @@ fabric.properties
 # End of https://www.gitignore.io/api/pycharm
 
 # ignore dataset  input or output
-/ontonodes_5.0/
-/msra/
+ontonodes_5.0/
+msra/
 
