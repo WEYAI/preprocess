@@ -64,15 +64,17 @@ def count_enity(source_path,target_path):  # count the num  of mrsa.test.net's e
         i= i+1
         num_type = enity_list.count(one)
         f.write(str(i) + ":the type is " + one + ":" + str(num_type) + "\n")
+    sentence_actual  = sentence_num - 1
+    f.write('The number of sentences:'+ str(sentence_actual)+'\n')
+    f.write('The num of enity:'+ str(len(enity_list))+'\n')
+    f.write('The kinds of enity:'+ str(len(set(enity_list)))+'\n')
+    f.write('the dataset is :'+source_path+'\n')
     f.close()
-    print('The number of sentences:')
-    print(sentence_num-1)
-    print('The num of enity:')
-    print(len(enity_list))
-    print('The kinds of enity:')
-    print(len(set(enity_list)))
 
 if __name__ == '__main__':
     # process_xml_to_ontonotes('msra_bakeoff3_training.xml','./output_result/result.net')
     # count_enity("ontonotes_5.0/onto.test.ner","./output_result/coun_test_notonotes.txt")
-    count_enity("msra/mrsa.development.ner","./output_result/count_development_mrsa.txt")
+    # count_enity("msra/mrsa.development.ner","./output_result/count_development_mrsa.txt")
+    count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.dev.resust","../weiboNER_2nd_conll/weiboNER_2nd.dev.txt")
+    count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.test.resust","../weiboNER_2nd_conll/weiboNER_2nd.test.txt")
+    count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.train.resust","../weiboNER_2nd_conll/weiboNER_2nd.train.txt")
