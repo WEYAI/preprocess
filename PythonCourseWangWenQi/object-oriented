@@ -1,0 +1,60 @@
+#!/usr/bin/python3
+# -*- coding:utf-8 -*-
+
+
+class Test:
+    def __init__(self, value):
+        self.__value = value
+
+    def __get(self):
+        return self.__value
+
+    def __set(self, v):
+        self.__value = v
+    value = property(__get, __set)
+
+
+a = Test(100)
+a.value += 2
+
+
+class Car:
+    price = 100000                    # 定义类属性
+    print(dir(print))
+
+    def __init__(self, c):
+        self.color = c	            # 定义实例属性
+
+
+car1 = Car("Red")
+car2 = Car("Blue")
+print(car1.color, Car.price)
+Car.price = 110000                 # 修改类属性
+Car.name = 'QQ'                    # 增加类属性
+car1.color = "Yellow"              # 修改实例属性
+print(car2.color, Car.price, Car.name)
+print(car1.color, Car.price, Car.name)
+
+
+class Person:
+    name = 'Person'
+
+    def __init__(self, na):
+        self.age = na  # need to  add self
+
+    def show(self):
+        print(self.name)
+
+
+Person.id = '123456'  # 动态增加类属性
+p = Person(20)
+print("age>>>>"+str(p.age))
+
+
+p.show()
+print(p.id)
+p.name = "zhangsan"
+p.show()
+print(Person.name)
+p.score = 10   # 动态增加实例属性
+print(p.score)
