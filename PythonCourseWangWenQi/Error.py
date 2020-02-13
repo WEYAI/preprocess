@@ -41,12 +41,5 @@
 # except FooError as e:
 #     print('FooError!')
 
-#  def open(file, mode='r', buffering=None, encoding=None, errors=None, newline=None, closefd=True):
-# Why does mode and no mode have the same effect
-with open('ErrorData/1301001.dat', 'r+', encoding='gb2312') as dataFile:
-    data = dataFile.read()
-    print(data)
-    dataFile.write("test for write...............")
-    print(data)
 
 
