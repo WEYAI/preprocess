@@ -87,4 +87,8 @@ fabric.properties
 # ignore dataset  input or output
 ontonotes_5.0/
 msra/
+# ignore the result of ctb8
+count_ctb8/dev.result
+count_ctb8/test.result
+count_ctb8/train.result
 
