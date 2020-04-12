@@ -1,0 +1,4 @@
+#!/usr/bin/python3
+# -*- coding:utf-8 -*-
+with open('~/wueryong/projects/corpus/conll2000/train.txt', 'r+', encoding='utf-8') as file:
+    with open('/data/dev.txt', 'w+', encoding='utf-8') as output:
