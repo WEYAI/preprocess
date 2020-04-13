@@ -3,11 +3,7 @@
 # @Author  : WEY
 # @File    : count_sentences
 # @Software: PyCharm
-# -*- coding: utf-8 -*-
-# @Time    : 4/11/20 5:00 PM
-# @Author  : WEY
-# @File    : count_sentences
-# @Software: PyCharm
+
 
 def count_sen(path):
     with open(path, 'r+', encoding='utf-8') as file:
