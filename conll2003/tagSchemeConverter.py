@@ -125,8 +125,14 @@ def choose_label(input_file, output_file):
 
 
 if __name__ == "__main__":
-    input_path = "../Data/Conll2003_NER/train.txt"
-    output_path = "../Data/Conll2003_BMES/train.txt"
+    input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.train"
+    output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.train"
+    BIO2BIOES(input_path, output_path)
+    input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.testa"
+    output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.testa"
+    BIO2BIOES(input_path, output_path)
+    input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.testb"
+    output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.testb"
     BIO2BIOES(input_path, output_path)
 
 # if __name__ == '__main__':
