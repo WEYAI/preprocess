@@ -53,18 +53,24 @@ def count_sen(path):
         index_loc = 0
         index_person = 0
         index_org = 0
+        line_num = 0
         for line in file:
-            # if line != '\n':
-            #     tag_str = line.split()[1]
-            #     if tag_str == 'B-LOCATION':
-            #         index_loc = index_loc + 1
-            #         # tag_start = tag_str.split('-')[0]
-            #         # tag_end = tag_str.split('-')[1]
-            #         # if tag_end == ''
-            #     if tag_str == 'B-PERSON':
-            #         index_person = index_person + 1
-            #     if tag_str == 'B-ORGANIZATION':
-            #         index_org = index_org + 1
+            line_num = line_num + 1
+            if line != '\n':
+                try:
+                    tag_str = line.split()[1]
+                except IndexError:
+                    print("The error in>>>>>>>>>>>>>>>>>>", line_num)
+                else:
+                    if tag_str == 'B-LOC':
+                        index_loc = index_loc + 1
+                        # tag_start = tag_str.split('-')[0]
+                        # tag_end = tag_str.split('-')[1]
+                        # if tag_end == ''
+                    if tag_str == 'B-PER':
+                        index_person = index_person + 1
+                    if tag_str == 'B-ORG':
+                        index_org = index_org + 1
 
             if '\n' == line and tag == 0:
                 i = i + 1
@@ -72,6 +78,9 @@ def count_sen(path):
             else:
                 tag = 0
         print(path, i)
+        print("B-LOCACTION", index_loc)
+        print("B-PERSON", index_person)
+        print("B-ORG", index_org)
 
 
 if __name__ == '__main__':
@@ -85,3 +94,4 @@ if __name__ == '__main__':
     # count_sen(path3)
     count_sen(path4)
     count_sen(path5)
+
