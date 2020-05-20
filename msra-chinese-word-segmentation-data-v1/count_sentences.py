@@ -48,7 +48,7 @@ def count_sen(path):
     # aad errors='ignore'
     # https://stackoverflow.com/questions/12468179/unicodedecodeerror-utf8-codec-cant-decode-byte-0x9c
     with open(path, 'r+', encoding='utf-8', errors='ignore') as file:
-        i = -1
+        i = 0
         tag = 0
         index_loc = 0
         index_person = 0
@@ -78,6 +78,10 @@ if __name__ == '__main__':
     path1 = '/home/zutnlp/wueryong/projects/github/sigle_file/data/weiboNER.conll.dev'
     path2 = '/home/zutnlp/wueryong/projects/github/sigle_file/data/weiboNER.conll.train'
     path3 = '/home/zutnlp/wueryong/projects/github/sigle_file/data/weiboNER.conll.test'
-    count_sen(path1)
-    count_sen(path2)
-    count_sen(path3)
+    path4 = './output_result/msra.test.ner'
+    path5 = './output_result/msra.train.ner'
+    # count_sen(path1)
+    # count_sen(path2)
+    # count_sen(path3)
+    count_sen(path4)
+    count_sen(path5)
