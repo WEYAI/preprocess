@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 # -*- coding:utf-8 -*-
+'''
+ convert mrsa xml to the formate of ' I  none none B-PERSON
+'''
 import xml.etree.ElementTree as ET
 # 从xml文件中读取，用getroot获取根节点，根节点也是Element对象
 def process_xml_to_ontonotes(source_path,target_path):  # change  xml to the format of  ontonotes
@@ -16,7 +19,7 @@ def process_xml_to_ontonotes(source_path,target_path):  # change  xml to the for
                 # print(i.text, i.tag, i.attrib, i.tail)
                 if not i.text is None:
                     precess_text.write(i.text+'\t'+ 'none'+'\t'+ 'none'+'\t'+'O'+'\n')
-                    pass
+
                 for j in i:   # i is w ,so j is NaMEX     <NAMEX TYPE="ORGANIZATION">中共中央</NAMEX>
                     precess_text.write(j.text+'\t'+ 'none'+ '\t'+'none'+'\t'+'B-'+j.attrib.get('TYPE')+'\n')
                     # print(j.text,j.tag,j.attrib.get('TYPE'),j.tail)  #中共中央 NAMEX {'TYPE': 'ORGANIZATION'} None   <w><NAMEX TYPE="ORGANIZATION">中共中央</NAMEX></w>
@@ -72,9 +75,9 @@ def count_enity(source_path,target_path):  # count the num  of mrsa.test.net's e
     f.close()
 
 if __name__ == '__main__':
-    # process_xml_to_ontonotes('msra_bakeoff3_training.xml','./output_result/result.net')
+    process_xml_to_ontonotes('msra_bakeoff3_training.xml','./output_result/result.net')
     # count_enity("ontonotes_5.0/onto.test.ner","./output_result/coun_test_notonotes.txt")
     # count_enity("msra/mrsa.development.ner","./output_result/count_development_mrsa.txt")
-    count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.dev.resust","../weiboNER_2nd_conll/weiboNER_2nd.dev.txt")
-    count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.test.resust","../weiboNER_2nd_conll/weiboNER_2nd.test.txt")
-    count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.train.resust","../weiboNER_2nd_conll/weiboNER_2nd.train.txt")
+    # count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.dev.resust","../weiboNER_2nd_conll/weiboNER_2nd.dev.txt")
+    # count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.test.resust","../weiboNER_2nd_conll/weiboNER_2nd.test.txt")
+    # count_enity("../weiboNER_2nd_conll/weiboNET_2nd_conll.train.resust","../weiboNER_2nd_conll/weiboNER_2nd.train.txt")
