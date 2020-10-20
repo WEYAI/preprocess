@@ -125,14 +125,24 @@ def choose_label(input_file, output_file):
 
 
 if __name__ == "__main__":
-    input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.train"
-    output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.train"
+    # input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.train"
+    # output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.train"
+    # BIO2BIOES(input_path, output_path)
+    # input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.testa"
+    # output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.testa"
+    # BIO2BIOES(input_path, output_path)
+    # input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.testb"
+    # output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.testb"
+    # BIO2BIOES(input_path, output_path)
+
+    input_path = "/home/zutnlp/corpus/notoNotes5.0/ner/onto.test.ner"
+    output_path = "/home/zutnlp/corpus/notoNotes5.0/ner/bioes.onto.test.ner"
     BIO2BIOES(input_path, output_path)
-    input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.testa"
-    output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.testa"
+    input_path = "/home/zutnlp/corpus/notoNotes5.0/ner/onto.development.ner"
+    output_path = "/home/zutnlp/corpus/notoNotes5.0/ner/bioes.onto.development.ner"
     BIO2BIOES(input_path, output_path)
-    input_path = "/home/zutnlp/corpus/CoNLL-2003/ner-BIO/bio.eng.ner.testb"
-    output_path = "/home/zutnlp/corpus/CoNLL-2003/bioes.eng.ner.testb"
+    input_path = "/home/zutnlp/corpus/notoNotes5.0/ner/onto.train.ner"
+    output_path = "/home/zutnlp/corpus/notoNotes5.0/ner/bioes.onto.train.ner"
     BIO2BIOES(input_path, output_path)
 
 # if __name__ == '__main__':
