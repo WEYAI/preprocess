@@ -89,9 +89,15 @@ if __name__ == '__main__':
     path3 = '/home/zutnlp/wueryong/projects/github/sigle_file/data/weiboNER.conll.test'
     path4 = './output_result/msra.test.ner'
     path5 = './output_result/msra.train.ner'
+    path6 = 'projects/github/preprocess/msra-chinese-word-segmentation-data-v1/ontonotes_5.0/onto.development.ner'
+    path7 = 'projects/github/preprocess/msra-chinese-word-segmentation-data-v1/ontonotes_5.0/onto.test.ner'
+    path8 = 'projects/github/preprocess/msra-chinese-word-segmentation-data-v1/ontonotes_5.0/onto.train.ner'
     # count_sen(path1)
     # count_sen(path2)
     # count_sen(path3)
-    count_sen(path4)
-    count_sen(path5)
+    # count_sen(path4)
+    # count_sen(path5)
+    count_sen(path6)
+    count_sen(path7)
+    count_sen(path8)
 
